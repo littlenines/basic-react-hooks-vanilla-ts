@@ -1,4 +1,4 @@
-# Vanilla JS React Hooks
+# Vanilla TS React Hooks
 
 A recreation of React's core hooks in vanilla TypeScript — built to understand how they work under the hood.
 

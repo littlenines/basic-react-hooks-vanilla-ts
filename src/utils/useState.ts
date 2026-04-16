@@ -1,13 +1,16 @@
 const useState = <T>(initial: T) => {
   let state = initial
-  let listener: (val: T) => void = () => {}
+  let listener = new Set<(val: T) => void>();
 
   const set = (value: T) => {
     state = value
-    listener(state)
+    listener.forEach((callback) => callback(value));
   }
 
-  const subscribe = (render: (val: T) => void) => { listener = render }
+  const subscribe = (render: (val: T) => void) => { 
+    listener.add(render)
+    return () => listener.delete(render);
+   }
 
   const get = () => state
 

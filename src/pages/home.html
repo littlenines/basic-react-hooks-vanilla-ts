@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <div id="center">
+      <h2>useState test</h2>
+      <input type="text" id="myInput">
+      <p>Input text: <span id="myText"></span></p>
+    </div>
+    <div id="center">
+      <h2>useEffect test</h2>
+      <input type="text" id="myEffectInput" maxlength="50" />
+      <p id="myEffectText"></p>
+      <p id="charCount">0 / 50</p>
+    </div>
+    <div id="center">
+      <h2>useMemo test</h2>
+      <input type="number" id="myMemoInput" />
+      <p>Factorial: <span id="memoFactorial"></span></p>
+    </div>
+    <div id="center">
+      <h2>useRef test (focused input)</h2>
+      <input type="text" id="focusedInput" />
+    </div>
+  </div>
+</body>
+<script type="module" src="/src/scripts/home.ts"></script>
+
+</html>
